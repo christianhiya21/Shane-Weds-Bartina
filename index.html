@@ -19,10 +19,10 @@
                 extend: {
                     colors: {
                         royal: {
-                            dark: '#12091a',
-                            DEFAULT: '#24102f',
+                            dark: '#800000',
+                            DEFAULT: '#800000',
                             light: '#321744',
-                            deep: '#0a0410'
+                            deep: '#800000'
                         },
                         gold: {
                             light: '#f3e5ab',
@@ -135,6 +135,74 @@
             background: #c9a65b;
             border-radius: 2px;
         }
+
+
+        /* PASTEL RAINBOW + CHAMPAGNE THEME */
+        :root {
+            --champagne: #C7A46A;
+            --champagne-light: #E8D5AD;
+            --ink: #4C4148;
+            --cream: rgba(255, 252, 247, 0.84);
+        }
+        body {
+            color: var(--ink) !important;
+            background: linear-gradient(135deg, #FFF1F3 0%, #FFF6E8 20%, #F3F9E9 40%, #EAF8F7 60%, #F0EDFF 80%, #FFF0F7 100%) fixed !important;
+        }
+        main { background: transparent !important; }
+        main > section:nth-of-type(1) {
+            background: linear-gradient(145deg, #FFF0F3 0%, #FFF7E8 35%, #F1F7E9 70%, #EAF7F7 100%) !important;
+        }
+        main > section:nth-of-type(2) {
+            background: linear-gradient(145deg, #F0EDFF 0%, #FBEFFF 45%, #FFF0F4 100%) !important;
+        }
+        main > section:nth-of-type(3) {
+            background: linear-gradient(145deg, #E9F8F4 0%, #F3F8E9 45%, #FFF5E8 100%) !important;
+        }
+        main > section:nth-of-type(4) {
+            background: linear-gradient(145deg, #FFF1E8 0%, #F8EDFF 50%, #EAF6FF 100%) !important;
+        }
+        main > section:nth-of-type(5) {
+            background: linear-gradient(145deg, #FCEAF2 0%, #FFF7E8 50%, #EAF8F5 100%) !important;
+        }
+        .luxury-card {
+            background: var(--cream) !important;
+            border-color: rgba(199, 164, 106, 0.58) !important;
+            box-shadow: 0 18px 55px rgba(118, 91, 107, 0.12) !important;
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+        }
+        [class*="bg-royal-dark"], [class*="bg-royal-light"], [class*="bg-royal/"],
+        [class*="from-royal"], [class*="via-royal"], [class*="to-royal"] {
+            background-color: rgba(255, 255, 255, 0.62) !important;
+            background-image: none !important;
+        }
+        #curtainLeft {
+            background: linear-gradient(135deg, #F6DDE7 0%, #F8E9D0 35%, #E4F0DA 68%, #DDEFF0 100%) !important;
+            border-color: rgba(199, 164, 106, 0.75) !important;
+        }
+        #curtainRight {
+            background: linear-gradient(225deg, #E7E2FA 0%, #F7E1EF 35%, #F8E9D0 68%, #E3F2E9 100%) !important;
+            border-color: rgba(199, 164, 106, 0.75) !important;
+        }
+        [class*="text-gold-light"] { color: var(--ink) !important; }
+        [class*="text-gold-mid"], [class*="text-gold/"], [class~="text-gold"] { color: #A78348 !important; }
+        [class*="border-gold"] { border-color: rgba(199, 164, 106, 0.55) !important; }
+        [class*="bg-gold-mid"], [class*="via-gold-mid"] { background-color: var(--champagne) !important; }
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #E9D6AF 0%, #C7A46A 50%, #A78348 100%) !important;
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+        }
+        .gold-glow { box-shadow: 0 0 20px rgba(199, 164, 106, 0.24) !important; }
+        .gold-glow-lg { box-shadow: 0 0 35px rgba(199, 164, 106, 0.35) !important; }
+        .luxury-card .absolute.border { border-color: rgba(199, 164, 106, 0.32) !important; }
+        #particleCanvas { z-index: 10; }
+        ::-webkit-scrollbar-track { background: #FFF4F0 !important; }
+        ::-webkit-scrollbar-thumb { background: var(--champagne) !important; }
+        #calendarBtn {
+            background: linear-gradient(100deg, #B99255, #E8D5AD, #C7A46A) !important;
+            color: #463A36 !important;
+        }
     </style>
 </head>
 <body class="bg-royal-dark text-gold-light font-serif antialiased overflow-x-hidden selection:bg-gold-mid selection:text-royal-dark">
@@ -168,13 +236,6 @@
                 <p class="font-parisienne text-lg sm:text-xl text-gold-light/90">Shane & Bartina's Wedding</p>
             </div>
         </div>
-    </div>
-
-    <!-- Floating Audio Control Button -->
-    <div class="fixed top-5 right-5 z-40">
-        <button id="musicToggle" class="w-11 h-11 rounded-full bg-royal/80 backdrop-blur-md border border-gold-mid/50 text-gold hover:text-gold-light flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-105 active:scale-95" aria-label="Toggle Soothing Music">
-            <i id="musicIcon" class="fa-solid fa-music text-sm"></i>
-        </button>
     </div>
 
     <!-- MAIN WRAPPER CONTAINER WITH SNAP SCROLLING -->
@@ -255,7 +316,7 @@
                     <div class="space-y-5 py-2">
                         <div>
                             <h3 class="font-playfair text-2xl sm:text-3xl text-gold-light font-semibold">Shane</h3>
-                            <p class="font-sans text-xs text-gold-mid/90 mt-1">Son of Mrs. Rinku & Mr. Harun</p>
+                            <p class="font-sans text-xs text-gold-mid/90 mt-1">S/O. MRS. RINKU & MR. HARUN CHRISTIAN</p>
                         </div>
 
                         <div class="flex items-center justify-center space-x-3">
@@ -266,7 +327,7 @@
 
                         <div>
                             <h3 class="font-playfair text-2xl sm:text-3xl text-gold-light font-semibold">Bartina</h3>
-                            <p class="font-sans text-xs text-gold-mid/90 mt-1">Daughter of Mrs. Manisha & Mr. Rajesh</p>
+                            <p class="font-sans text-xs text-gold-mid/90 mt-1">D/O. MRS. MANISHA & MR. RAJESH CHRISTIAN</p>
                         </div>
                     </div>
 
@@ -277,7 +338,7 @@
                         <div class="border-r border-gold-mid/20 pr-2">
                             <p class="font-sans text-[10px] uppercase text-gold-mid tracking-wider">Date & Time</p>
                             <p class="font-serif text-sm text-gold-light font-semibold mt-0.5">Saturday, 21 Nov 2026</p>
-                            <p class="font-sans text-xs text-gold-light/80">At 11:30 AM</p>
+                            <p class="font-sans text-xs text-gold-light/80">At 12:00 PM</p>
                         </div>
                         <div class="pl-2">
                             <p class="font-sans text-[10px] uppercase text-gold-mid tracking-wider">Church Venue</p>
@@ -367,7 +428,7 @@
                     <div>
                         <span class="font-sans text-xs tracking-[0.2em] text-gold-mid uppercase">Counting down to the holy matrimony</span>
                         <h2 class="font-italiana text-3xl sm:text-4xl text-gold-light mt-1">21 November 2026</h2>
-                        <p class="font-serif text-sm text-gold/80 italic mt-0.5">At 11:30 AM</p>
+                        <p class="font-serif text-sm text-gold/80 italic mt-0.5">At 12:00 PM</p>
                     </div>
 
                     <!-- Live Countdown Timer -->
@@ -481,8 +542,6 @@
                 leftCurtain.classList.add('curtain-open-left');
                 rightCurtain.classList.add('curtain-open-right');
                 
-                // Start music synthesizer
-                startAudio();
             }, 200);
 
             // Remove curtain overlay completely after animation finishes
@@ -494,108 +553,7 @@
         document.getElementById('sealContainer').addEventListener('click', unveilInvitation);
 
         /* -------------------------------------------------------------
-           2. SOOTHING MUSIC SYNTHESIZER (WEB AUDIO API)
-           Generates dynamic acoustic harp/piano arpeggio chords in major scale
-           ------------------------------------------------------------- */
-        let audioCtx = null;
-        let isMuted = false;
-        let isAudioPlaying = false;
-        let synthInterval = null;
-
-        // Soft, romantic ambient chord frequency progressions (Acoustic feel)
-        const chords = [
-            [261.63, 329.63, 392.00, 523.25], // C Major
-            [220.00, 261.63, 329.63, 440.00], // A Minor
-            [174.61, 220.00, 261.63, 349.23], // F Major
-            [196.00, 246.94, 293.66, 392.00]  // G Major
-        ];
-
-        let chordIndex = 0;
-        let noteIndex = 0;
-
-        function playSoftNote(freq) {
-            if (!audioCtx || isMuted) return;
-
-            try {
-                const osc = audioCtx.createOscillator();
-                const gain = audioCtx.createGain();
-
-                // Sine wave with soft triangle harmonic blend for acoustic warmth
-                osc.type = 'sine';
-                osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-
-                // Attack and long natural decay (Harp/Acoustic Piano profile)
-                const now = audioCtx.currentTime;
-                gain.gain.setValueAtTime(0, now);
-                gain.gain.linearRampToValueAtTime(0.08, now + 0.15); // Ultra-gentle attack
-                gain.gain.exponentialRampToValueAtTime(0.0001, now + 2.8); // Long soothing decay
-
-                osc.connect(gain);
-                gain.connect(audioCtx.destination);
-
-                osc.start(now);
-                osc.stop(now + 2.9);
-            } catch (e) {
-                console.log('Audio playback error:', e);
-            }
-        }
-
-        function startAudio() {
-            if (isAudioPlaying) return;
-            
-            const AudioContext = window.AudioContext || window.webkitAudioContext;
-            if (!audioCtx) {
-                audioCtx = new AudioContext();
-            }
-
-            if (audioCtx.state === 'suspended') {
-                audioCtx.resume();
-            }
-
-            isAudioPlaying = true;
-
-            // Play arpeggiated ambient chords every 400ms
-            synthInterval = setInterval(() => {
-                if (isMuted) return;
-
-                const currentChord = chords[chordIndex];
-                const noteFreq = currentChord[noteIndex];
-                
-                playSoftNote(noteFreq);
-
-                noteIndex++;
-                if (noteIndex >= currentChord.length) {
-                    noteIndex = 0;
-                    chordIndex = (chordIndex + 1) % chords.length;
-                }
-            }, 450);
-        }
-
-        // Music Toggle Button
-        const musicToggleBtn = document.getElementById('musicToggle');
-        const musicIcon = document.getElementById('musicIcon');
-
-        musicToggleBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            
-            if (!isAudioPlaying) {
-                startAudio();
-                return;
-            }
-
-            isMuted = !isMuted;
-            if (isMuted) {
-                musicIcon.className = "fa-solid fa-volume-xmark text-red-300";
-            } else {
-                musicIcon.className = "fa-solid fa-music text-gold";
-                if (audioCtx && audioCtx.state === 'suspended') {
-                    audioCtx.resume();
-                }
-            }
-        });
-
-        /* -------------------------------------------------------------
-           3. FLOATING GOLD PARTICLES CANVAS ANIMATION
+           2. FLOATING GOLD PARTICLES CANVAS ANIMATION
            ------------------------------------------------------------- */
         const canvas = document.getElementById('particleCanvas');
         const ctx = canvas.getContext('2d');
@@ -658,9 +616,9 @@
         };
 
         /* -------------------------------------------------------------
-           4. COUNTDOWN TIMER LOGIC
+           3. COUNTDOWN TIMER LOGIC
            ------------------------------------------------------------- */
-        const weddingDate = new Date('November 21, 2026 11:30:00').getTime();
+        const weddingDate = new Date('November 21, 2026 12:00:00').getTime();
 
         function updateCountdown() {
             const now = new Date().getTime();
@@ -686,14 +644,14 @@
         updateCountdown();
 
         /* -------------------------------------------------------------
-           5. ADD TO CALENDAR (.ICS FILE GENERATOR / LINK)
+           4. ADD TO CALENDAR (.ICS FILE GENERATOR / LINK)
            ------------------------------------------------------------- */
         function downloadCalendarInvite() {
             const title = encodeURIComponent("Shane Weds Bartina - Holy Matrimony");
             const details = encodeURIComponent("Join us in celebrating the wedding of Shane & Bartina at CNI Raikhad Church, Ahmedabad.");
             const location = encodeURIComponent("CNI Ahmedabad Raikhad Church, Raikhad, Ahmedabad, Gujarat 380001");
-            const startDate = "20261121T060000Z"; // 11:30 AM IST is 06:00 UTC
-            const endDate = "20261121T090000Z";
+            const startDate = "20261121T063000Z"; // 12:00 PM IST is 06:30 UTC
+            const endDate = "20261121T093000Z";
 
             // Direct Google Calendar URL
             const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${details}&location=${location}`;
