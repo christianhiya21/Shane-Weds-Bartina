@@ -203,6 +203,39 @@
             background: linear-gradient(100deg, #B99255, #E8D5AD, #C7A46A) !important;
             color: #463A36 !important;
         }
+
+        /* Explicit mobile overrides: prevent dark Tailwind royal classes from reappearing */
+        @media screen and (max-width: 768px) {
+            html, body {
+                background: linear-gradient(135deg, #FFF1F3 0%, #FFF6E8 22%, #F3F9E9 44%, #EAF8F7 66%, #F0EDFF 84%, #FFF0F7 100%) !important;
+                background-attachment: scroll !important;
+                color: #4C4148 !important;
+            }
+            main, main > section, .snap-section {
+                background-color: transparent !important;
+                color: #4C4148 !important;
+            }
+            main > section:nth-of-type(1) { background: linear-gradient(145deg, #FFF0F3, #FFF7E8, #F1F7E9, #EAF7F7) !important; }
+            main > section:nth-of-type(2) { background: linear-gradient(145deg, #F0EDFF, #FBEFFF, #FFF0F4) !important; }
+            main > section:nth-of-type(3) { background: linear-gradient(145deg, #E9F8F4, #F3F8E9, #FFF5E8) !important; }
+            main > section:nth-of-type(4) { background: linear-gradient(145deg, #FFF1E8, #F8EDFF, #EAF6FF) !important; }
+            main > section:nth-of-type(5) { background: linear-gradient(145deg, #FCEAF2, #FFF7E8, #EAF8F5) !important; }
+            .luxury-card {
+                background: rgba(255, 252, 247, 0.92) !important;
+                color: #4C4148 !important;
+                border-color: rgba(199, 164, 106, 0.65) !important;
+            }
+            [class*="bg-royal-dark"], [class*="bg-royal-light"], [class*="bg-royal/"],
+            [class*="from-royal"], [class*="via-royal"], [class*="to-royal"] {
+                background-color: rgba(255, 255, 255, 0.72) !important;
+                background-image: none !important;
+            }
+            #curtainOverlay { background: linear-gradient(135deg, #FFF1F3, #FFF6E8, #EAF8F7, #F0EDFF) !important; }
+            #curtainLeft { background: linear-gradient(135deg, #F6DDE7, #F8E9D0, #E4F0DA, #DDEFF0) !important; }
+            #curtainRight { background: linear-gradient(225deg, #E7E2FA, #F7E1EF, #F8E9D0, #E3F2E9) !important; }
+            [class*="text-gold-light"] { color: #4C4148 !important; }
+            [class*="text-gold-mid"], [class*="text-gold/"], [class~="text-gold"] { color: #A78348 !important; }
+        }
     </style>
 </head>
 <body class="bg-royal-dark text-gold-light font-serif antialiased overflow-x-hidden selection:bg-gold-mid selection:text-royal-dark">
